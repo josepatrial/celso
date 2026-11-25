@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy: #0E223D;
+  --navy-deep: #081324;
+  --institutional: #1E5074;
+  --light-blue: #EAF4F8;
+  --soft-gray: #F4F6F9;
+  --surface: #FFFFFF;
+  --text-main: #0B1928;
+  --text-muted: #243447;
+  --border-subtle: #D8E2EC;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-institutional: var(--institutional);
+  --color-light-blue: var(--light-blue);
+  --color-soft-gray: var(--soft-gray);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
+  --font-sans: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-size: 110%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--surface);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-weight: 450;
+  letter-spacing: -0.012em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--navy);
+  letter-spacing: -0.025em;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--light-blue);
+  color: var(--navy);
+}
+
+@keyframes fadeUpSoft {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUpSoft 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fadeUpSoft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fadeUpSoft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fadeUpSoft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+/* Editorial prose styling for medical articles */
+.prose-medical h2 {
+  font-family: var(--font-serif);
+  color: var(--navy);
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2.25rem;
+  margin-bottom: 0.875rem;
+}
+
+.prose-medical h3 {
+  color: var(--navy);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.625rem;
+}
+
+.prose-medical p {
+  color: var(--text-muted);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.prose-medical ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.prose-medical li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.625rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.prose-medical li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--institutional);
 }

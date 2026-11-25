@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" fill="none">
+  <defs>
+    <linearGradient id="bg-tmo" x1="0" y1="0" x2="1200" y2="750" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0E213C"/>
+      <stop offset="55%" stop-color="#142D50"/>
+      <stop offset="100%" stop-color="#245C83"/>
+    </linearGradient>
+    <radialGradient id="glow-tmo" cx="0.7" cy="0.35" r="0.55">
+      <stop offset="0%" stop-color="#EAF4F8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#142D50" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg-tmo)"/>
+  <rect width="1200" height="750" fill="url(#glow-tmo)"/>
+  <g stroke="#EAF4F8" stroke-opacity="0.14" stroke-width="1.2">
+    <circle cx="820" cy="340" r="240"/>
+    <circle cx="820" cy="340" r="180"/>
+    <circle cx="820" cy="340" r="120"/>
+    <circle cx="820" cy="340" r="60"/>
+    <line x1="520" y1="340" x2="1120" y2="340"/>
+    <line x1="820" y1="40" x2="820" y2="640"/>
+  </g>
+  <g stroke="#EAF4F8" stroke-opacity="0.28" stroke-width="1.5">
+    <circle cx="820" cy="340" r="92" stroke-dasharray="6 8"/>
+    <circle cx="680" cy="460" r="44"/>
+    <circle cx="960" cy="230" r="32"/>
+    <circle cx="420" cy="220" r="18"/>
+  </g>
+  <circle cx="820" cy="340" r="14" fill="#EAF4F8" fill-opacity="0.75"/>
+  <circle cx="680" cy="460" r="7" fill="#EAF4F8" fill-opacity="0.55"/>
+  <circle cx="960" cy="230" r="6" fill="#EAF4F8" fill-opacity="0.55"/>
+  <path d="M120 620 C 320 560, 480 410, 680 460 S 940 310, 1080 160" stroke="#EAF4F8" stroke-opacity="0.22" stroke-width="1.5" fill="none"/>
+</svg>
